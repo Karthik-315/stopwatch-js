@@ -1,16 +1,111 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 :root{
     --border-color: black;
     --button-width: 70%;
 }
 
-.button-effects{
-    border: 1px solid black;
-    border-radius: 5px;
-    width: var(--button-width);
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.main-div{
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
     border: 5px solid var(--border-color);
     padding: 3% 0%;
+    margin: 0 auto;
+    width: 1000px;
+    height: 400px;
+    background: rgb(255, 188, 126, 0.1);
+    justify-content: space-between;
+}
+
+.container h2{
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 0.25rem;
+    text-align: center;
+}
+
+.container h1{
+    font-size: 50px;
+    letter-spacing: 0.5rem;
+    text-align: center;
+}
+
+.button-group{
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.button-effects{
+    border: none;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    width: 200px;
+    height: 50px;
+    font-size: 28px;
+    background-color: orange;
+    color: white;
+}
+
+.button-effects:hover{
+    cursor: pointer;
+}
+
+.disable{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@media(max-width: 1000px){
+    .container{
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+@media(max-width: 767px){
+    .button-group{
+        flex-direction: column;
+    }
+
+    .button-effects{
+        margin: 5px auto;
+    }
+
+    .container{
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+@media(max-width: 400px){  
+    .container h2{
+        font-size: 25px;
+        letter-spacing: 0.15rem;
+        text-align: center;
+        margin-top: 50px;
+        justify-content: space-evenly;
+    }
+
+    .button-group{
+        margin-bottom: 20px;
+    }
 }
